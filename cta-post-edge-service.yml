@@ -1,0 +1,20 @@
+server:
+  port: ${PORT:8002}
+
+spring:
+  devtools:
+    livereload:
+      enabled: true
+  cloud:
+    stream:
+      bindings:
+        movement:
+          destination: cta.edge.ingestion.movements
+          content-type: application/json
+          producer:
+            requiredGroups: event,timeseries
+        planogram:
+          destination: cta.edge.ingestion.planogram
+          content-type: application/json
+          producer:
+            requiredGroups: planogram
