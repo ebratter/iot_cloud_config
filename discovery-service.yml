@@ -4,4 +4,6 @@ server:
 eureka:
   client:
     registerWithEureka: false
-    fetchRegistry: false
+
+security:
+  password: Hello1234
