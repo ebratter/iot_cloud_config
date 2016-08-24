@@ -3,7 +3,14 @@ info:
   id: ${spring.application.name}
 server:
   port: ${PORT:0}
-  
+
+eureka:
+  client:
+      region: default
+      registryFetchIntervalSeconds: 5
+      serviceUrl:
+        defaultZone: ${vcap.services.discovery-service.credentials.uri:http://user:Hello1234@localhost:8761}/eureka/
+
 spring:
   cloud:
     stream:

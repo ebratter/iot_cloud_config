@@ -6,9 +6,9 @@ eureka:
       instanceId: ${vcap.application.instance_id:${spring.application.name}:${server.port:8080}}
     leaseRenewalIntervalInSeconds: 5
   client:
-    region: default
-    registryFetchIntervalSeconds: 5
-    serviceUrl:
-      defaultZone: ${vcap.services.discovery-service.credentials.uri}/eureka/
+      region: default
+      registryFetchIntervalSeconds: 5
+      serviceUrl:
+        defaultZone: ${vcap.services.discovery-service.credentials.uri:http://user:Hello1234@localhost:8761}/eureka/
 #spring.zipkin.base-url=${vcap.services.zipkin-service.credentials.uri}
 #spring.rabbitmq.host=${vcap.services.reservations-rabbitmq.credentials.uri}
