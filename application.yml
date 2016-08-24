@@ -1,10 +1,33 @@
 debug: true
-
 info:
   id: ${spring.application.name}
-
 server:
   port: ${PORT:0}
+eureka:
+  instance:
+    hostname: ${vcap.application.uris[0]:localhost}
+    nonSecurePort: 80
+    metadataMap:
+      instanceId: ${vcap.application.instance_id:${spring.application.name}:${server.port:8080}}
+      leaseRenewalIntervalInSeconds: 5
+  client:
+    region: default
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: ${vcap.services.discovery-service.credentials.uri}/eureka/
+spring:
+  cloud:
+    stream:
+      binder:
+        rabbit:
+          default:
+            default-delivery-mode: persistent
+            acknowledge-mode: manual
+            durable-subscription: true
+            transacted: true
+            default-requeue-rejected: true
+            auto-bind-dlq: true
+            republish-to-dlq: true
 
 #spring.sleuth.sampler.percentage=1.0
 #logging.level.org.springframework.security=DEBUG
@@ -44,19 +67,3 @@ server:
 #endpoints.shutdown.enabled=true
 
 #spring.jpa.generate-ddl=true
-
-
-## Rabbit specific binder bits
-spring:
-  cloud:
-    stream:
-      binder:
-        rabbit:
-          default:
-            default-delivery-mode: persistent
-            acknowledge-mode: manual
-            durable-subscription: true
-            transacted: true
-            default-requeue-rejected: true
-            auto-bind-dlq: true
-            republish-to-dlq: true
