@@ -1,3 +1,6 @@
+security:
+  user:
+    password: Hello1234
 eureka:
   client:
       region: default
