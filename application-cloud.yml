@@ -1,3 +1,5 @@
+random:
+  value: 1232
 security:
   user:
     password: Hello1234
