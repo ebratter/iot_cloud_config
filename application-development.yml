@@ -1,0 +1,16 @@
+spring:
+  devtools:
+    livereload:
+      enabled: true
+eureka:
+  client:
+      region: default
+      registryFetchIntervalSeconds: 5
+      serviceUrl:
+        defaultZone: http://user:Hello1234@localhost:8761/eureka/
+
+security:
+  user:
+    password: Hello1234
+#spring.zipkin.base-url=${vcap.services.zipkin-service.credentials.uri}
+#spring.rabbitmq.host=${vcap.services.reservations-rabbitmq.credentials.uri}

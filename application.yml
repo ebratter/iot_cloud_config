@@ -4,13 +4,6 @@ info:
 server:
   port: ${PORT:0}
 
-eureka:
-  client:
-      region: default
-      registryFetchIntervalSeconds: 5
-      serviceUrl:
-        defaultZone: ${vcap.services.discovery-service.credentials.uri:http://user:Hello1234@localhost:8761}/eureka/
-
 spring:
   cloud:
     stream:
@@ -24,6 +17,7 @@ spring:
             default-requeue-rejected: true
             auto-bind-dlq: true
             republish-to-dlq: true
+      
 #spring.sleuth.sampler.percentage=1.0
 #logging.level.org.springframework.security=DEBUG
 #logging.pattern.console=%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%5p) %clr(${PID:- }){magenta} %clr(---){faint} %clr([trace=%X{X-Trace-Id:-},span=%X{X-Span-Id:-}]){yellow} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n%wex

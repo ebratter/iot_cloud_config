@@ -1,7 +1,0 @@
-spring:
-  devtools:
-    livereload:
-      enabled: true
-
-server:
-  port: ${PORT:8001}

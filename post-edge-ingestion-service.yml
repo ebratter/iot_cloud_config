@@ -2,9 +2,6 @@ server:
   port: ${PORT:8002}
 
 spring:
-  devtools:
-    livereload:
-      enabled: true
   cloud:
     stream:
       bindings:
