@@ -2,6 +2,9 @@ security:
   user:
     password: Hello1234
 eureka:
+  instance:
+      hostname: ${vcap.application.uris[0]}
+      nonSecurePort: 80
   client:
       region: default
       registryFetchIntervalSeconds: 5
