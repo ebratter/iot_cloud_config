@@ -1,2 +1,16 @@
 server:
   port: ${PORT:8001}
+
+images:
+  uploadMaxSize: 500000
+
+spring:
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    properties:
+      eclipselink.ddl-generation: create-or-extend-tables
+      eclipselink.logging.parameters: false
+      eclipselink.logging.level.sql: INFO
+      eclipselink.logging.level: INFO
+      eclipselink.logging.level.cache: INFO

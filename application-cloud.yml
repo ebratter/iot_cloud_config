@@ -1,17 +1,12 @@
-random:
-  value: 1232
-security:
-  user:
-    password: Hello1234
-eureka:
-  instance:
-    instanceId: ${vcap.application.instance_id}
-    hostname: ${vcap.application.uris[0]}
-    nonSecurePort: 80
-  client:
-      region: default
-      registryFetchIntervalSeconds: 5
-      serviceUrl:
-        defaultZone: ${vcap.services.discovery-service.credentials.uri:http://user:Hello1234@localhost:8761}/eureka/
+#eureka:
+#  instance:
+#    instanceId: ${vcap.application.instance_id}
+#    hostname: ${vcap.application.uris[0]}
+#    nonSecurePort: 80
+#  client:
+#      region: default
+#      registryFetchIntervalSeconds: 5
+#      serviceUrl:
+#        defaultZone: ${vcap.services.discovery-service.credentials.uri:http://user:Hello1234@localhost:8761}/eureka/
 #spring.zipkin.base-url=${vcap.services.zipkin-service.credentials.uri}
 #spring.rabbitmq.host=${vcap.services.reservations-rabbitmq.credentials.uri}

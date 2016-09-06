@@ -1,0 +1,11 @@
+server:
+  port: ${PORT:8003}
+
+spring:
+  cloud:
+    stream:
+      bindings:
+        movement:
+          group: timeseries
+          destination: cta.edge.ingestion.movements
+          content-type: application/json
