@@ -11,7 +11,6 @@ spring:
           content-type: application/json
 
 email:
-  from: sap.riesenrad@gmail.com
   imaps-host: imap.gmail.com
   smtp-auth: true
   smtp-host: smtp.gmail.com

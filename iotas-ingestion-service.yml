@@ -1,6 +1,13 @@
 server:
   port: ${PORT:8003}
 
+iot:
+  platform:
+    enable:
+      thing-repository: true
+      event-repository: false
+      authorization-repository: true
+
 spring:
   cloud:
     stream:
