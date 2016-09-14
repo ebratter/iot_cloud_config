@@ -3,6 +3,12 @@ info:
 server:
   port: ${PORT:0}
 
+logging:
+  level:
+    com.sap.cd: TRACE
+    com.sap.hcp.cf: INFO
+    org.springframework: INFO
+
 spring:
   cloud:
     stream:
