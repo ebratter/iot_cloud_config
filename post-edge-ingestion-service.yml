@@ -1,6 +1,6 @@
 server:
   port: ${PORT:8002}
-
+    
 spring:
   cloud:
     stream:

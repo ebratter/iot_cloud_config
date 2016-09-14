@@ -9,6 +9,25 @@ logging:
     com.sap.hcp.cf: INFO
     org.springframework: INFO
 
+cta:
+  thingModel:
+    tenant: test.sandbox
+    thingType:
+      shelf:
+        name: ${cta.thingModel.tenant}.cta.asset:SmartShelf
+        propertySetType:
+          dispeningUnit:
+            id: dispensing_unit
+            name: ${cta.thingModel.tenant}.cta.asset:DispensingUnit
+            messageType: com.sap.cd.iot.cta.integration.message.MovementMessage
+      vendingMachine:
+        name: ${cta.thingModel.tenant}.cta.asset:VendingMachine
+        propertySetType:
+          dispeningUnit:
+            id: dispensing_unit
+            name: ${cta.thingModel.tenant}.cta.asset:DispensingUnit
+            messageType: com.sap.cd.iot.cta.integration.message.MovementMessage
+
 spring:
   cloud:
     stream:
