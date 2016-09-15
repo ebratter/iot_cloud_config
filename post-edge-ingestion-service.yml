@@ -1,5 +1,9 @@
 server:
   port: ${PORT:8002}
+
+security:
+  user:
+    password: initial
     
 spring:
   cloud:

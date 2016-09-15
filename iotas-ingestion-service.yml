@@ -1,6 +1,10 @@
 server:
   port: ${PORT:8003}
 
+security:
+  user:
+    password: initial
+    
 iot:
   platform:
     enable:
