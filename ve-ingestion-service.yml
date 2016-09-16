@@ -1,0 +1,22 @@
+server:
+  port: ${PORT:8003}
+  
+spring:
+  cloud:
+    stream:
+      bindings:
+        movement:
+          destination: cta.ve.ingestion.movements
+          content-type: application/json
+          producer:
+            requiredGroups: timeseries
+        planogram:
+          destination: cta.ve.ingestion.planogram
+          content-type: application/json
+          producer:
+            requiredGroups: planogram
+        event:
+          destination: cta.ve.ingestion.event
+          content-type: application/json
+          producer:
+            requiredGroups: event
