@@ -4,7 +4,7 @@ server:
 security:
   user:
     password: initial
-    
+
 iot:
   platform:
     enable:
@@ -17,6 +17,6 @@ spring:
     stream:
       bindings:
         movement:
-          group: timeseries
-          destination: cta.edge.ingestion.movements
+          destination: cta.ingestion.pipe
+          group: iotas-ingestion-movement
           content-type: application/json

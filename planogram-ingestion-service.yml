@@ -1,5 +1,5 @@
 server:
-  port: ${PORT:8002}
+  port: ${PORT:8005}
 
 security:
   user:
@@ -11,7 +11,9 @@ spring:
       bindings:
         movement:
           destination: cta.ingestion.pipe
+          group: planogram-ingestion-movement
           content-type: application/json
         planogram:
           destination: cta.ingestion.pipe
+          group: planogram-ingestion-planogram-update
           content-type: application/json

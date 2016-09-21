@@ -1,5 +1,8 @@
 server:
   port: ${PORT:8001}
+odata:
+  service:
+    mapping: /odata/Product.svc/*
 images:
   uploadMaxSize: 500000
 spring:

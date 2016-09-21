@@ -8,6 +8,7 @@ logging:
     com.sap.cd: TRACE
     com.sap.hcp.cf: INFO
     org.springframework: INFO
+    org.apache.olingo: TRACE
 
 cta:
   thingModel:
