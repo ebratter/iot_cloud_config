@@ -1,0 +1,21 @@
+server:
+  port: ${PORT:8005}
+ 
+security:
+  user:
+    password: initial
+
+geoservice:
+  destination:
+    id: GGL_MAPS
+  type: http
+  description: Google Maps API
+  proxyType: internet
+  proxyHost:
+  proxyPort:
+  url: https://maps.googleapis.com
+  auth:
+    key: AIzaSyARtbQfcoLGTOH6xP7FZuHPdC_Y9cC3-lE
+  provider:
+    service:
+      className: com.sap.iot.cta.geo.provider.GoogleGeoProviderServices
